@@ -1,0 +1,45 @@
+name: 調査タスク
+description: 調査対象について記述ください.
+title: "[:microscope: 調査]: "
+labels: ["調査"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        調査内容について記述.
+        `(Optional)`が付いている項目はオプション項目となります.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: |
+        調査概要について記述します.
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_list
+    attributes:
+      label: タスクリスト(Optional)
+      description: |
+        設計に必要となるサブタスクを記述ください.
+        > サブタスクがIssue化されている場合は、`- [ ] #Issue番号`という形式で記述ください.
+      placeholder: |
+        サブタスクがIssue化されている場合は - [ ] #Issue番号 という形式で記述
+      value: |
+        - [ ] 
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_task_list
+    attributes:
+      label: 関連Issue(Optional)
+      description: |
+        前提Issueを`- #Issue番号`というように記述ください.
+        > Issue化されていない前提タスクについてはフリーテキストで記述.
+      placeholder: |
+        - #Issue番号 という形式で記述
+    validations:
+      required: false

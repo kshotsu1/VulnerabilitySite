@@ -1,0 +1,51 @@
+name: 調達タスク
+description: 調達タスク
+title: "[:moneybag: 調達]: "
+labels: ["調達"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        調達 タスクの内容について記述.
+        `(Optional)`が付いている項目はオプション項目となります.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: |
+        調達の概要について記述します.
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_list
+    attributes:
+      label: タスクリスト(Optional)
+      description: |
+        調達にに必要となるサブタスクを記述ください.
+        > サブタスクがIssue化されている場合は、`- [ ] #Issue番号`という形式で記述ください.
+      placeholder: |
+        サブタスクがIssue化されている場合は - [ ] #Issue番号 という形式で記述
+      value: |
+        - [ ] 
+    validations:
+      required: false
+
+  - type: textarea
+    id: required_resouces
+    attributes:
+      label: 調達対象(Optional)
+      description: |
+        調達対象を記述ください.
+      value: |
+        - 
+    validations:
+      required: false
+        
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考資料(Optional)
+    validations:
+      required: false

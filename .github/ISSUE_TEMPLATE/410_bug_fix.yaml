@@ -1,0 +1,110 @@
+name: バグ対応
+description: 対応するバグについて記述ください.
+title: "[:lady_beetle: :pill: バグ対応]: "
+labels: ["バグ"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        修正するバグについて記述.
+        `(Optional)`が付いている項目はオプション項目となります.
+
+  - type: input
+    id: target
+    attributes:
+      label: 修正対象種別(Optional)
+      description: |
+        修正対象を記述  
+        > 例) データベース バックエンドサービス api ui 状態管理 システム構成 ミドルウェア構成 その他
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: |
+        修正概要について記述します.
+    validations:
+      required: true
+
+  - type: textarea
+    id: phenomenon
+    attributes:
+      label: 事象
+      description: |
+        発生している事象について記述.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順/バグ発生条件(Optional)
+      description: バグの再現方法/発生条件を記述.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 期待した動作(Optional)
+      description: その機能がするべきはずの動作を記述.
+    validations:
+      required: false
+
+  - type: textarea
+    id: cause
+    attributes:
+      label: 原因(Optional)
+      description: 原因が分かったら記述.
+    validations:
+      required: false
+  
+  - type: textarea
+    id: constrains
+    attributes:
+      label: 制約条件(Optional)
+      description: 修正する上での制約条件があったら記述ください.
+    validations:
+      required: false
+
+  - type: textarea
+    id: task_list
+    attributes:
+      label: タスクリスト(Optional)
+      description: |
+        修正に必要となるサブタスクを記述ください.
+        > サブタスクがIssue化されている場合は、`- [ ] #Issue番号`という形式で記述ください.
+      placeholder: |
+        サブタスクがIssue化されている場合は - [ ] #Issue番号 という形式で記述
+      value: |
+        - [ ] 
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_item
+    attributes:
+      label: テスト項目(Optional)
+      description: |
+        修正後に確認しておいてほしいチェック項目を記述するのでもOK.
+      value: |
+        - [ ] 
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_task_list
+    attributes:
+      label: 関連Issue(Optional)
+      description: |
+        関連Issueを`- #Issue番号`という形式で記述ください.
+      placeholder: |
+        - #Issue番号 という形式で記述
+    validations:
+      required: false

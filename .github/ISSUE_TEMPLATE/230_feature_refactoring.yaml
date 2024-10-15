@@ -1,0 +1,100 @@
+name: 実装のリファクタリング
+description: リファクタリングする機能について記述ください.
+title: "[:rocket: エンハンス]: "
+labels: ["開発", "リファクタリング"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        リファクタリングについて記述.
+        `(Optional)`が付いている項目はオプション項目となります.
+
+  - type: input
+    id: target
+    attributes:
+      label: リファクタリング対象種別(Optional)
+      description: |
+        リファクタリング対象を記述  
+        > 例) データベース バックエンドサービス api ui 状態管理 システム構成 ミドルウェア構成 その他
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: |
+        リファクタリングの概要について記述します.
+        > 可能であれば、リファクタリングがもたらす価値を記述ください.
+    validations:
+      required: true
+
+  - type: textarea
+    id: policy
+    attributes:
+      label: リファクタリング方針(Optional)
+      description: |
+        リファクタリングの方針について記述ください.
+        > 「なぜそうするのか」も可能な限り記述する.  
+        > 記述内容の粒度をIssueの担当者に合わせて記述する.
+    validations:
+      required: false
+
+  - type: textarea
+    id: constrains
+    attributes:
+      label: 制約条件(Optional)
+      description: |
+        リファクタリングする上での制約条件があったら記述ください.
+        > 後で決める、やらないことを明確にする.  
+        > 懸念事項を事前に共有する.
+    validations:
+      required: false
+
+  - type: textarea
+    id: task_list
+    attributes:
+      label: タスクリスト(Optional)
+      description: |
+        設計に必要となるサブタスクを記述ください.
+        > サブタスクがIssue化されている場合は、`- [ ] #Issue番号`という形式で記述ください.
+      placeholder: |
+        サブタスクがIssue化されている場合は - [ ] #Issue番号 という形式で記述
+      value: |
+        - [ ] 
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_item
+    attributes:
+      label: テスト項目(Optional)
+      description: |
+        実装後に確認しておいてほしいチェック項目を記述するのでもOK.
+      value: |
+        - [ ] 
+    validations:
+      required: false
+
+  - type: textarea
+    id: premise_task_list
+    attributes:
+      label: 前提Issue(Optional)
+      description: |
+        前提Issueを`- #Issue番号`というように記述ください.
+        > Issue化されていない前提タスクについてはフリーテキストで記述.
+      placeholder: |
+        - #Issue番号 という形式で記述
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_task_list
+    attributes:
+      label: 関連Issue(Optional)
+      description: |
+        関連Issueを`- #Issue番号`という形式で記述ください.
+      placeholder: |
+        - #Issue番号 という形式で記述
+    validations:
+      required: false

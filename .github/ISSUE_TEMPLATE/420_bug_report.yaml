@@ -1,0 +1,56 @@
+name: バグ報告
+description: File a bug report
+title: "[:lady_beetle: :notebook: バグ報告]: "
+labels: ["バグレポート"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告を記述ください.
+        `(Optional)`が付いている項目はオプション項目となります.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 概要
+      description: 発生したバグについて教えてください.
+      placeholder: バグの内容を記述
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順(Optional)
+      description: 分かったらバグの再現方法を教えてください.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 期待した動作(Optional)
+      description: その機能がするべきはずの動作を教えてください(A description of what you expected to happen)
+    validations:
+      required: false
+  
+  - type: textarea
+    id: logs
+    attributes:
+      label: ログ(Optional)
+      description: 関連するログの出力をコピーしてペーストしてください。 これは自動的にコードにフォーマットされるので、バックティックは不要です。
+      render: Shell
+    validations:
+      required: false
+  
+  - type: textarea
+    id: other
+    attributes:
+      label: その他(Optional)
+    validations:
+      required: false
+

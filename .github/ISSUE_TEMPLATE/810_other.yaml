@@ -1,0 +1,66 @@
+name: その他タスク
+description: その他のタスク
+title: "[]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        その他のタスクの内容について記述.
+        `(Optional)`が付いている項目はオプション項目となります.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: |
+        タスクの概要について記述します.
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_list
+    attributes:
+      label: タスクリスト(Optional)
+      description: |
+        タスクに必要となるサブタスクを記述ください.
+        > サブタスクがIssue化されている場合は、`- [ ] #Issue番号`という形式で記述ください.
+      placeholder: |
+        サブタスクがIssue化されている場合は - [ ] #Issue番号 という形式で記述
+      value: |
+        - [ ] 
+    validations:
+      required: false
+
+  - type: textarea
+    id: check_item
+    attributes:
+      label: チェック項目(Optional)
+      description: |
+        チェック項目(あったら)を記述するのでもOK.
+      value: |
+        - [ ] 
+    validations:
+      required: false
+ 
+  - type: textarea
+    id: premise_task_list
+    attributes:
+      label: 前提Issue(Optional)
+      description: |
+        前提Issueを`- #Issue番号`というように記述ください.
+        > Issue化されていない前提タスクについてはフリーテキストで記述.
+      placeholder: |
+        - #Issue番号 という形式で記述
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_task_list
+    attributes:
+      label: 関連Issue(Optional)
+      description: |
+        関連Issueを`- #Issue番号`という形式で記述ください.
+      placeholder: |
+        - #Issue番号 という形式で記述
+    validations:
+      required: false
